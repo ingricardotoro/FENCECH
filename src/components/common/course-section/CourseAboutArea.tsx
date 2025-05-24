@@ -5,8 +5,8 @@ import circleImg from "../../../../public/assets/images/shape/about-solid-circle
 import bookShapeImg from "../../../../public/assets/images/shape/about-book-shape.webp";
 import aboutWaveShape from "../../../../public/assets/images/shape/about-wave-shape.webp";
 import aboutCircle from "../../../../public/assets/images/shape/about-circle.webp";
-import aboutThumb1 from "../../../../public/assets/images/about/about-thumb-01.webp";
-import aboutThumbSmall from "../../../../public/assets/images/about/about-thumb-small-01.webp";
+//import aboutThumb1 from "../../../../public/assets/images/about/about-thumb-01.webp";
+//import aboutThumbSmall from "../../../../public/assets/images/about/about-thumb-small-01.webp";
 import dotShape from "../../../../public/assets/images/shape/dot-shape-01.webp";
 import Evangelizacion from "../../../../public/assets/images/about/evangelizacion.png";
 

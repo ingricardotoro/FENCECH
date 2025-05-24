@@ -1,9 +1,9 @@
-import pricingThumb1 from "../../public/assets/images/price/pricing_thumb01.webp";
-import pricingThumb2 from "../../public/assets/images/price/pricing_thumb02.webp";
-import pricingThumb3 from "../../public/assets/images/price/pricing_thumb03.webp";
+//import pricingThumb1 from "../../public/assets/images/price/pricing_thumb01.webp";
+//import pricingThumb2 from "../../public/assets/images/price/pricing_thumb02.webp";
+//import pricingThumb3 from "../../public/assets/images/price/pricing_thumb03.webp";
 
 import RECENSUR2 from "../../public/assets/images/price/RECENSUR2.png";
-import RECOP from "../../public/assets/images/price/RECOP.png";
+//import RECOP from "../../public/assets/images/price/RECOP.png";
 import RECOP2 from "../../public/assets/images/price/RECOP2.png";
 import RENOCC2 from "../../public/assets/images/price/RENOCC2.png";
 
