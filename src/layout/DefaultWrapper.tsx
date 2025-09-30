@@ -12,7 +12,7 @@ import FooterOne from "./footer/FooterOne";
 //import HeaderFour from "./header/HeaderFour";
 //import FooterFive from "./footer/FooterFive";
 //import HeaderFive from "./header/HeaderFive";
-import CommonFooter from "./footer/CommonFooter";
+//import CommonFooter from "./footer/CommonFooter";
 //import KindergartentFooter from "./footer/KindergartentFooter";
 //import KindergartenHeader from "./header/KindergartenHeader";
 //import QuranLearningHeader from "./header/QuranLearningHeader";
