@@ -123,6 +123,7 @@ const main_mobile_menu_data: MenuItem[] = [
         link: "#",
         megaMenu: [
           { title: "Contact Us", link: "/contact-us" },
+          { title: "Quiénes Somos", link: "/quienes-somos" },
           { title: "About Online Course", link: "/about-online-course" },
           { title: "About University", link: "/about-university" },
           { title: "About Modern Schooling", link: "/about-modern-schooling" },

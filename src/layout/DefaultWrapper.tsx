@@ -83,7 +83,7 @@ const Wrapper: React.FC<WrapperProps> = ({ children }) => {
       <BacktoTop />
       {headerMap[pathName] || <HeaderOne />}
       {isLoading ? <Preloader /> : children}
-      {footerMap[pathName] || <CommonFooter />}
+      {footerMap[pathName] || <FooterOne />}
     </>
   );
 };

@@ -36,11 +36,11 @@ const main_menu_data: MenuItem[] = [
     id: 2,
     hasDropdown: false,
     active: true,
-    megaMenu: true,
-    children: true,
+    megaMenu: false,
+    children: false,
     title: "Quienes Somos",
-    pluseIncon: true,
-    link: "#",
+    pluseIncon: false,
+    link: "/quienes-somos",
     /* submenus: [
     
       {
@@ -106,11 +106,11 @@ const main_menu_data: MenuItem[] = [
     id: 6,
     hasDropdown: false,
     active: true,
-    megaMenu: true,
-    children: true,
+    megaMenu: false,
+    children: false,
     title: "Contáctanos",
-    pluseIncon: true,
-    link: "#",
+    pluseIncon: false,
+    link: "/contactanos",
     /* submenus: [
     
       {
