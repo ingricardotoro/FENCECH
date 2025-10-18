@@ -15,7 +15,6 @@ const RECOPPage = () => {
             <main>
                 <SchoolGrid 
                     region="RECOP" 
-                    title="RECOP - Región Centro Oriental y Pacífico"
                     description="Descubre los institutos educativos de excelencia que forman parte de la Región Centro Oriental y Pacífico, comprometidos con la educación integral en las zonas centrales y del pacífico sur de Honduras."
                 />
             </main>

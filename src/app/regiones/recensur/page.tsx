@@ -15,7 +15,6 @@ const RECENSURPage = () => {
             <main>
                 <SchoolGrid 
                     region="RECENSUR" 
-                    title="RECENSUR - Región Centro Sur"
                     description="Conoce los institutos educativos de la Región Centro Sur, ubicados en la zona industrial y el occidente del país, formando profesionales competentes para el desarrollo económico de Honduras."
                 />
             </main>

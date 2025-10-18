@@ -15,7 +15,6 @@ const RENOCCPage = () => {
             <main>
                 <SchoolGrid 
                     region="RENOCC" 
-                    title="RENOCC - Región Norte Occidental y Centro Occidental"
                     description="Explora los institutos educativos de la Región Norte Occidental y Centro Occidental, situados en la hermosa costa norte y las zonas fronterizas occidentales, promoviendo la educación multicultural y el desarrollo turístico."
                 />
             </main>
