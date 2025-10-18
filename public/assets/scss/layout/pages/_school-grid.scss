@@ -1,0 +1,289 @@
+/* School Grid Styles */
+.bd-school-grid-area {
+  background-color: #f8f9fa;
+}
+
+.bd-school-item {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.bd-school-item-wrapper {
+  position: relative;
+}
+
+.bd-school-thumb {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+  
+  img {
+    transition: transform 0.3s ease;
+  }
+  
+  &:hover img {
+    transform: scale(1.05);
+  }
+}
+
+.bd-school-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 2;
+  
+  .school-region-badge {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+}
+
+.bd-school-content {
+  padding: 25px;
+}
+
+.bd-school-meta {
+  margin-bottom: 15px;
+  
+  .school-location {
+    color: #6c757d;
+    font-size: 14px;
+    font-weight: 500;
+    
+    i {
+      color: #dc3545;
+      margin-right: 6px;
+    }
+  }
+}
+
+.bd-school-title {
+  margin-bottom: 15px;
+  
+  a {
+    color: #2c3e50;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    
+    &:hover {
+      color: #667eea;
+    }
+  }
+}
+
+.bd-school-description {
+  color: #6c757d;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Contact Information Styles */
+.bd-school-contact-info {
+  .school-contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    
+    i {
+      color: #667eea;
+      width: 16px;
+      margin-right: 10px;
+      margin-top: 2px;
+      font-size: 14px;
+    }
+    
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      
+      .phone-primary {
+        color: #2c3e50;
+        font-weight: 600;
+        font-size: 14px;
+      }
+      
+      .phone-secondary {
+        color: #6c757d;
+        font-size: 13px;
+      }
+      
+      .school-email,
+      .school-website {
+        color: #667eea;
+        text-decoration: none;
+        font-size: 14px;
+        transition: color 0.3s ease;
+        
+        &:hover {
+          color: #5a6fd8;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+/* Social Networks Styles */
+.bd-school-social {
+  border-top: 1px solid #e9ecef;
+  padding-top: 20px;
+  margin-top: 20px;
+  
+  .school-social-list {
+    display: flex;
+    gap: 12px;
+    
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      color: #ffffff;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: 14px;
+      
+      &.facebook {
+        background-color: #3b5998;
+        
+        &:hover {
+          background-color: #2d4373;
+          transform: translateY(-2px);
+        }
+      }
+      
+      &.instagram {
+        background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(188, 24, 136, 0.3);
+        }
+      }
+      
+      &.twitter {
+        background-color: #1da1f2;
+        
+        &:hover {
+          background-color: #0d95e8;
+          transform: translateY(-2px);
+        }
+      }
+      
+      &.youtube {
+        background-color: #ff0000;
+        
+        &:hover {
+          background-color: #cc0000;
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
+}
+
+/* Region Badge Styles */
+.bd-region-badge {
+  .region-indicator {
+    background-color: #e9ecef;
+    color: #495057;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    
+    i {
+      color: #dc3545;
+    }
+  }
+}
+
+/* No Schools Found Styles */
+.bd-no-schools-found {
+  .no-schools-icon {
+    opacity: 0.3;
+  }
+  
+  h4 {
+    color: #495057;
+    font-weight: 600;
+  }
+  
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .bd-school-content {
+    padding: 20px;
+  }
+  
+  .bd-school-title a {
+    font-size: 18px;
+  }
+  
+  .bd-school-social .school-social-list {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .bd-school-content {
+    padding: 15px;
+  }
+  
+  .bd-school-contact-info .school-contact-item {
+    .contact-details {
+      .phone-primary,
+      .school-email,
+      .school-website {
+        font-size: 13px;
+      }
+    }
+  }
+  
+  .bd-region-badge {
+    text-align: center !important;
+    margin-top: 15px;
+  }
+}
+
+/* Load More Button */
+.bd-school-more-btn {
+  .bd-btn {
+    padding: 14px 30px;
+    font-weight: 600;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+    }
+  }
+}

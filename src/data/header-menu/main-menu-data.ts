@@ -55,55 +55,35 @@ const main_menu_data: MenuItem[] = [
       },
     ], */
   },
-  
+  {
+    id: 3,
+    hasDropdown: true,
+    active: true,
+    megaMenu: false,
+    children: true,
+    title: "Regiones",
+    pluseIncon: true,
+    link: "#",
+    submenus: [
+      {
+        title: "RECOP",
+        link: "/regiones/recop",
+        pluseIncon: false,
+      },
+      {
+        title: "RECENSUR",
+        link: "/regiones/recensur",
+        pluseIncon: false,
+      },
+      {
+        title: "RENOCC",
+        link: "/regiones/renocc",
+        pluseIncon: false,
+      },
+    ],
+  },
   {
     id: 4,
-    hasDropdown: false,
-    active: true,
-    megaMenu: true,
-    children: false,
-    title: "Nuestas Instalaciones",
-    pluseIncon: true,
-    link: "#",
-    /* submenus: [
-    
-      {
-        title: "Evento 1",
-        link: "/course-lesson",
-        pluseIncon: false,
-      },
-      {
-        title: "Evento 2",
-        link: "/create-course",
-        pluseIncon: false,
-      },
-    ], */
-  },
-  {
-    id: 5,
-    hasDropdown: false,
-    active: true,
-    megaMenu: true,
-    children: false,
-    title: "Nuestros Servicios",
-    pluseIncon: true,
-    link: "#",
-    /* submenus: [
-    
-      {
-        title: "Evento 1",
-        link: "/course-lesson",
-        pluseIncon: false,
-      },
-      {
-        title: "Evento 2",
-        link: "/create-course",
-        pluseIncon: false,
-      },
-    ], */
-  },
-  {
-    id: 6,
     hasDropdown: false,
     active: true,
     megaMenu: false,

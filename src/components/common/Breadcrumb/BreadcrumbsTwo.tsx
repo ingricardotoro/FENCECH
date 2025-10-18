@@ -3,16 +3,17 @@ import Link from 'next/link';
 import React from 'react';
 import breadcrumbShapeOne from '../../../../public/assets/images/shape/breadcrumb-shape-1.webp';
 import breadcrumbShapeTwo from '../../../../public/assets/images/shape/breadcrumb-shape-2.webp';
-import breadcrumbBg from '../../../../public/assets/images/breadcrumb/breadcrumb-bg.webp'
+//import breadcrumbBg from '../../../../public/assets/images/breadcrumb/breadcrumb-bg.webp'
+import breadcrumbBg2 from '../../../../public/assets/images/breadcrumb/degradado-difuminado-verde.jpg'
 
-interface breadCrumbType{
+interface BreadCrumbType{
     breadcrumbTwoTitle:string
 }
-const BreadcrumbsTwo = ({breadcrumbTwoTitle}:breadCrumbType) => {
+const BreadcrumbsTwo = ({breadcrumbTwoTitle}:BreadCrumbType) => {
     return (
-        <>
+       
             <section className="bd-breadcrumb-area p-relative fix z-index-11">
-                <div className="bd-breadcrumb-bg" style={{backgroundImage:`url(${breadcrumbBg.src})`}}></div>
+                <div className="bd-breadcrumb-bg" style={{backgroundImage: `url(${breadcrumbBg2.src})`}}></div>
                 <div className="bd-breadcrumb-wrapper p-relative">
                     <div className="container">
                         <div className="row">
@@ -36,7 +37,7 @@ const BreadcrumbsTwo = ({breadcrumbTwoTitle}:breadCrumbType) => {
                     </div>
                 </div>
             </section>
-        </>
+        
     );
 };
 

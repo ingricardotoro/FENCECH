@@ -21,7 +21,7 @@ export const coursePricingPlanData = [
         id: 1,
         image: RECOP2,
         checkIcon: checkIconSvg,
-        title: "Basic Plan",
+        title: "RECOP",
         courses: 10,
         description: "Regional de Comayagua y La PAZ",
         features: [
@@ -31,14 +31,14 @@ export const coursePricingPlanData = [
             "Instituto San Matias",
         ],
         price: 10,
-        url: "/pricing",
+        url: "/regiones/recop",
         hasBackground: false,
     },
     {
         id: 2,
         image: RECENSUR2,
         checkIcon: checkIconSvg,
-        title: "Standard Plan",
+        title: "RECENSUR",
         courses: 13,
         description: "Regional Centro Sur del Pais.",
         features: [
@@ -48,14 +48,14 @@ export const coursePricingPlanData = [
             "Instituto San Matias",
         ],
         price: 13,
-        url: "/pricing",
+        url: "/regiones/recensur",
         hasBackground: true,
     },
     {
         id: 3,
         image: RENOCC2,
         checkIcon: checkIconSvg,
-        title: "Premium Plan",
+        title: "RENOCC",
         courses: 13,
         description: "Regional Norte - Occidente",
         features: [
@@ -65,7 +65,7 @@ export const coursePricingPlanData = [
             "Instituto San Matias",
         ],
         price: 16,
-        url: "/pricing",
+        url: "/regiones/renocc",
         hasBackground: false,
     },
     //Online Course pricing plan data end
