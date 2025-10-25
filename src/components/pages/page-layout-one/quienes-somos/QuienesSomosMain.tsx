@@ -1,13 +1,13 @@
 import React from 'react';
-import BreadcrumbsTwo from '@/components/common/Breadcrumb/BreadcrumbsTwo';
 import FencechHistoryArea from './FencechHistoryArea';
 import FencechMissionVisionArea from './FencechMissionVisionArea';
 import AboutCtaArea from '@/components/common/about-cta/AboutCtaArea';
+import BreadcrumbNosotros from '@/components/common/Breadcrumb/BreadcrumbNosotros';
 
 const QuienesSomosMain = () => {
     return (
         <>
-            <BreadcrumbsTwo breadcrumbTwoTitle='Quiénes Somos' />
+            <BreadcrumbNosotros breadcrumbTwoTitle='Quiénes Somos' />
             <FencechHistoryArea />
             <FencechMissionVisionArea />
             <AboutCtaArea />
