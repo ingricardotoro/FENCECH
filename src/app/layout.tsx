@@ -1,4 +1,4 @@
-import { Roboto, Big_Shoulders_Display } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.scss";
 import "swiper/css/bundle";
 import "react-photo-view/dist/react-photo-view.css";
@@ -18,12 +18,14 @@ const roboto = Roboto({
   weight: ["100", "300", "400", "500", "700", "900"],
 });
 
-// Load Big Shoulders Display font
-const bigShoulders = Big_Shoulders_Display({
-  variable: "--font-big-shoulders",
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
+// Note: Big Shoulders Display is loaded via Google Fonts in _theme.scss
+// Uncomment below if you need it as a Next.js font variable
+// import { Bebas_Neue } from "next/font/google";
+// const bigShoulders = Bebas_Neue({
+//   variable: "--font-big-shoulders",
+//   subsets: ["latin"],
+//   weight: ["400"],
+// });
 
 export const metadata: Metadata = {
   title: "FENCECH - Honduras",
@@ -37,7 +39,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body suppressHydrationWarning className={`body-bg ${roboto.variable} ${bigShoulders.variable}`}>
+      <body suppressHydrationWarning className={`body-bg ${roboto.variable}`}>
         <VideoProvider>
           <ReduxProvider>
             <AppProvider>

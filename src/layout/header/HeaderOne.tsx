@@ -22,7 +22,7 @@ const HeaderOne = () => {
                             </ul>
                         </div>
                         <div className="bd-header-top-right text-md-end">
-                            <Link href="#"><span><i className="fa-sharp fa-regular fa-location-dot"></i></span>Las Colinas, Tegucucigalpa, Honduras</Link>
+                            <Link href="#"><span><i className="fa-sharp fa-regular fa-location-dot"></i></span>Tegucucigalpa, Honduras</Link>
                         </div>
                     </div>
                 <div className={`bd-header-area header-style-one demo-header ${scrollDirection === "down" ? "bd-sticky" : ""}`} id="header-sticky">

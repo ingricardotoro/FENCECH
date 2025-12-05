@@ -287,3 +287,243 @@
     }
   }
 }
+
+/* Schools Table Styles */
+.bd-schools-table-wrapper {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  
+  .bd-section-title {
+    font-size: 28px;
+    color: #2c3e50;
+  }
+  
+  .bd-section-des {
+    color: #6c757d;
+    font-size: 16px;
+  }
+}
+
+.bd-schools-table {
+  margin-bottom: 0;
+  
+  thead {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    
+    th {
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 15px 12px;
+      border: none;
+      vertical-align: middle;
+      
+      &:first-child {
+        border-radius: 8px 0 0 0;
+      }
+      
+      &:last-child {
+        border-radius: 0 8px 0 0;
+      }
+    }
+  }
+  
+  tbody {
+    tr {
+      transition: all 0.3s ease;
+      border-bottom: 1px solid #e9ecef;
+      
+      &:hover {
+        background-color: #f8f9fa;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      }
+      
+      &:last-child {
+        border-bottom: none;
+      }
+      
+      th, td {
+        padding: 15px 12px;
+        vertical-align: middle;
+        font-size: 14px;
+      }
+      
+      th {
+        font-weight: 600;
+        color: #667eea;
+      }
+      
+      td {
+        color: #495057;
+        
+        strong {
+          color: #2c3e50;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+.school-table-desc {
+  margin-top: 5px;
+  
+  small {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+}
+
+.school-phones {
+  div {
+    line-height: 1.6;
+    
+    &:first-child {
+      font-weight: 500;
+    }
+  }
+}
+
+.school-email-link {
+  color: #667eea;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  
+  &:hover {
+    color: #5a6fd8;
+    text-decoration: underline;
+  }
+  
+  i {
+    font-size: 12px;
+  }
+}
+
+.school-social-links {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  
+  .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 13px;
+    
+    &.facebook {
+      background-color: #3b5998;
+      
+      &:hover {
+        background-color: #2d4373;
+        transform: scale(1.1);
+      }
+    }
+    
+    &.instagram {
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+      
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 2px 8px rgba(188, 24, 136, 0.3);
+      }
+    }
+    
+    &.twitter {
+      background-color: #1da1f2;
+      
+      &:hover {
+        background-color: #0d95e8;
+        transform: scale(1.1);
+      }
+    }
+    
+    &.youtube {
+      background-color: #ff0000;
+      
+      &:hover {
+        background-color: #cc0000;
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+/* Responsive Design for Table */
+@media (max-width: 1199px) {
+  .bd-schools-table {
+    font-size: 13px;
+    
+    thead th {
+      font-size: 12px;
+      padding: 12px 8px;
+    }
+    
+    tbody {
+      tr {
+        th, td {
+          padding: 12px 8px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .bd-schools-table-wrapper {
+    padding: 20px;
+    overflow-x: auto;
+  }
+  
+  .bd-schools-table {
+    min-width: 900px;
+  }
+}
+
+@media (max-width: 767px) {
+  .bd-schools-table-wrapper {
+    padding: 15px;
+    
+    .bd-section-title {
+      font-size: 22px;
+    }
+    
+    .bd-section-des {
+      font-size: 14px;
+    }
+  }
+  
+  .bd-schools-table {
+    font-size: 12px;
+    
+    thead th {
+      font-size: 11px;
+      padding: 10px 6px;
+    }
+    
+    tbody {
+      tr {
+        th, td {
+          padding: 10px 6px;
+        }
+      }
+    }
+  }
+  
+  .school-social-links {
+    .social-icon {
+      width: 28px;
+      height: 28px;
+      font-size: 11px;
+    }
+  }
+}

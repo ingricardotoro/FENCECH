@@ -19,11 +19,30 @@ export interface School {
     description?: string;
 }
 
+export interface SchoolTable {
+    id: number;
+    name: string;
+    image: string;
+    phone1: string;
+    phone2?: string;
+    email: string;
+    website?: string;
+    socialNetworks: {
+        facebook?: string;
+        instagram?: string;
+        twitter?: string;
+        youtube?: string;
+    };
+    region: 'RECOP' | 'RECENSUR' | 'RENOCC';
+    location: string;
+    description?: string;
+}
+
 // Datos de institutos RECOP (Región Centro Oriental y Pacífico)
 export const recopSchools: School[] = [
     {
         id: 1,
-        name: "C.E.N.G San Jerónimo Emiliani",
+        name: "C.E.N.G San Jerónimo Emiliani22",
         image: "/assets/images/institutos/emiliani22.jpg",
         phone1: "+504 9270-0365",
         phone2: "",
@@ -69,54 +88,7 @@ export const recopSchools: School[] = [
         location: "El Progreso, Yoro",
         description: "Educamos con la convicción que \"El Mundo Puede Ser Transformado Por Medio De La Educación\""
     },
-    {
-        id: 4,
-        name: "C.E.N.G San Jerónimo Emiliani",
-        image: "/assets/images/institutos/emiliani22.jpg",
-        phone1: "+504 9270-0365",
-        phone2: "",
-        email: "",
-        website: "",
-        socialNetworks: {
-            facebook: "https://www.facebook.com/share/19FHKyLUoH/",
-            instagram: "",
-            twitter: ""
-        },
-        region: "RECOP",
-        location: "Tegucigalpa, Col. Carrizal #1",
-        description: "Somos una institucion educativa de Caridad , Trabajo y Devoción"
-    },
-    {
-        id: 5,
-       name: "Centro Escolar Concepción de María",
-        image: "/assets/images/institutos/concepcion_de_maria.png",
-        phone1: "+504 3333-0138",
-        email: "direccion@cecom.app",
-        website: "",
-        socialNetworks: {
-            facebook: "https://facebook.com/centrosanjose",
-            instagram: "https://www.instagram.com/cecom_hn/"
-        },
-        region: "RECOP",
-        location: "16ta Calle, Juticalpa, Olancho",
-        description: "Somos una institución donde humanizamos la educación, donde cada estudiante es un talento único."
-    },
-    {
-        id: 6,
-        name: "Instituto notre Dame - Escuela Bilingüe",
-        image: "/assets/images/institutos/notredame.png",
-        phone1: "+504 9874-0323",
-        phone2: "+504 2647-4463",
-        email: "notredamehonduras@gmail.com",
-        website: "",
-        socialNetworks: {
-            facebook: "https://www.facebook.com/InstitutoNotreDameHn/",
-            instagram: "",
-        },
-        region: "RECOP",
-        location: "El Progreso, Yoro",
-        description: "Educamos con la convicción que \"El Mundo Puede Ser Transformado Por Medio De La Educación\""
-    }
+    
 ];
 
 // Datos de institutos RECENSUR (Región Centro Sur)
@@ -297,14 +269,68 @@ export const renoccSchools: School[] = [
     }
 ];
 
+
+export const recopSchoolsTable: SchoolTable[] = [
+    {
+        id: 101,
+        name: "C.E.N.G San Jerónimo Emiliani",
+        image: "/assets/images/institutos/emiliani22.jpg",
+        phone1: "9270-0365",
+        phone2: "",
+        email: "",
+        website: "",
+        socialNetworks: {
+            facebook: "https://www.facebook.com/share/19FHKyLUoH/",
+            instagram: "",
+            twitter: ""
+        },
+        region: "RECOP",
+        location: "Tegucigalpa, Col. Carrizal #1",
+        description: "Somos una institucion educativa de Caridad , Trabajo y Devoción"
+    },
+    {
+        id: 102,
+        name: "Centro Escolar Concepción de María",
+        image: "/assets/images/institutos/concepcion_de_maria.png",
+        phone1: "3333-0138",
+        email: "direccion@cecom.app",
+        website: "",
+        socialNetworks: {
+            facebook: "https://facebook.com/centrosanjose",
+            instagram: "https://www.instagram.com/cecom_hn/"
+        },
+        region: "RECOP",
+        location: "16ta Calle, Juticalpa, Olancho",
+        description: "Somos una institución donde humanizamos la educación, donde cada estudiante es un talento único."
+    },
+    {
+        id: 103,
+        name: "Instituto notre Dame - Escuela Bilingüe",
+        image: "/assets/images/institutos/notredame.png",
+        phone1: "9874-0323",
+        phone2: "2647-4463",
+        email: "notredamehonduras@gmail.com",
+        website: "",
+        socialNetworks: {
+            facebook: "https://www.facebook.com/InstitutoNotreDameHn/",
+            instagram: "",
+        },
+        region: "RECOP",
+        location: "El Progreso, Yoro",
+        description: "Educamos con la convicción que \"El Mundo Puede Ser Transformado Por Medio De La Educación\""
+    },
+    
+];
+
 // Exportar todos los institutos
 export const allSchools: School[] = [...recopSchools, ...recensurSchools, ...renoccSchools];
+export const allSchoolsTable: SchoolTable[] = [ ...recopSchoolsTable];
 
 // Función para obtener institutos por región
 export const getSchoolsByRegion = (region: 'RECOP' | 'RECENSUR' | 'RENOCC'): School[] => {
     switch (region) {
         case 'RECOP':
-            return recopSchools;
+            return [...recopSchools, ...recopSchoolsTable];
         case 'RECENSUR':
             return recensurSchools;
         case 'RENOCC':

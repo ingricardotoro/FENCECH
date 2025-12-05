@@ -2,7 +2,7 @@
 import React from 'react';
 //import BreadcrumbsTwo from '@/components/common/Breadcrumb/BreadcrumbsTwo';
 import SchoolCard from '@/components/common/schools-card/SchoolCard';
-import { School, getSchoolsByRegion } from '@/data/schools/schools-data';
+import { School, getSchoolsByRegion, recopSchoolsTable } from '@/data/schools/schools-data';
 
 interface SchoolGridProps {
     region: 'RECOP' | 'RECENSUR' | 'RENOCC';
@@ -103,6 +103,390 @@ const SchoolGrid: React.FC<SchoolGridProps> = ({ region, description }) => {
                             </div>
                         </div>
                     )}
+
+                    {/* Tabla de Institutos - Solo para RECOP */}
+                    {region === 'RECOP' && recopSchoolsTable.length > 0 && (
+                        <div className="row mt-60">
+                            <div className="col-12">
+                                <div className="bd-schools-table-wrapper">
+                                    <div className="bd-section-title-wrapper text-center mb-40">
+                                        <h3 className="bd-section-title">
+                                            Directorio Completo de Institutos RECOP
+                                        </h3>
+                                        <p className="bd-section-des">
+                                            Información detallada de contacto de nuestros institutos afiliados
+                                        </p>
+                                    </div>
+                                    <div className="table-responsive">
+                                        <table className="table bd-schools-table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">Nombre del Instituto</th>
+                                                    <th scope="col">Ubicación</th>
+                                                    <th scope="col">Teléfono</th>
+                                                    <th scope="col">Email</th>
+                                                    <th scope="col">Redes Sociales</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {recopSchoolsTable.map((school, index) => (
+                                                    <tr key={school.id}>
+                                                        <th scope="row">{index + 1}</th>
+                                                        <td>
+                                                            <strong>{school.name}</strong>
+                                                            {school.description && (
+                                                                <div className="school-table-desc">
+                                                                    <small className="text-muted">{school.description}</small>
+                                                                </div>
+                                                            )}
+                                                        </td>
+                                                        <td>
+                                                            <i className="fa-solid fa-location-dot text-danger me-2"></i>
+                                                            {school.location}
+                                                        </td>
+                                                        <td>
+                                                            <div className="school-phones">
+                                                                <div>{school.phone1}</div>
+                                                                {school.phone2 && (
+                                                                    <div className="text-muted">
+                                                                        <small>{school.phone2}</small>
+                                                                    </div>
+                                                                )}
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            {school.email ? (
+                                                                <a href={`mailto:${school.email}`} className="school-email-link">
+                                                                    <i className="fa-solid fa-envelope me-2"></i>
+                                                                    {school.email}
+                                                                </a>
+                                                            ) : (
+                                                                <span className="text-muted">-</span>
+                                                            )}
+                                                        </td>
+                                                        <td>
+                                                            <div className="school-social-links">
+                                                                {school.socialNetworks.facebook && (
+                                                                    <a 
+                                                                        href={school.socialNetworks.facebook}
+                                                                        target="_blank"
+                                                                        rel="noopener noreferrer"
+                                                                        className="social-icon facebook"
+                                                                        title="Facebook"
+                                                                    >
+                                                                        <i className="fab fa-facebook-f"></i>
+                                                                    </a>
+                                                                )}
+                                                                {school.socialNetworks.instagram && (
+                                                                    <a 
+                                                                        href={school.socialNetworks.instagram.startsWith('http') 
+                                                                            ? school.socialNetworks.instagram 
+                                                                            : `https://instagram.com/${school.socialNetworks.instagram.replace('@', '')}`}
+                                                                        target="_blank"
+                                                                        rel="noopener noreferrer"
+                                                                        className="social-icon instagram"
+                                                                        title="Instagram"
+                                                                    >
+                                                                        <i className="fab fa-instagram"></i>
+                                                                    </a>
+                                                                )}
+                                                                {school.socialNetworks.twitter && (
+                                                                    <a 
+                                                                        href={`https://twitter.com/${school.socialNetworks.twitter.replace('@', '')}`}
+                                                                        target="_blank"
+                                                                        rel="noopener noreferrer"
+                                                                        className="social-icon twitter"
+                                                                        title="Twitter"
+                                                                    >
+                                                                        <i className="fab fa-twitter"></i>
+                                                                    </a>
+                                                                )}
+                                                                {school.socialNetworks.youtube && (
+                                                                    <a 
+                                                                        href={school.socialNetworks.youtube}
+                                                                        target="_blank"
+                                                                        rel="noopener noreferrer"
+                                                                        className="social-icon youtube"
+                                                                        title="YouTube"
+                                                                    >
+                                                                        <i className="fab fa-youtube"></i>
+                                                                    </a>
+                                                                )}
+                                                                {!school.socialNetworks.facebook && 
+                                                                 !school.socialNetworks.instagram && 
+                                                                 !school.socialNetworks.twitter && 
+                                                                 !school.socialNetworks.youtube && (
+                                                                    <span className="text-muted">-</span>
+                                                                )}
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                ))}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Tabla de Institutos - Solo para RECOP */}
+                    {region === 'RECENSUR' && recopSchoolsTable.length > 0 && (
+                        <div className="row mt-60">
+                            <div className="col-12">
+                                <div className="bd-schools-table-wrapper">
+                                    <div className="bd-section-title-wrapper text-center mb-40">
+                                        <h3 className="bd-section-title">
+                                            Directorio Completo de Institutos RECOP
+                                        </h3>
+                                        <p className="bd-section-des">
+                                            Información detallada de contacto de nuestros institutos afiliados
+                                        </p>
+                                    </div>
+                                    <div className="table-responsive">
+                                        <table className="table bd-schools-table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">Nombre del Instituto</th>
+                                                    <th scope="col">Ubicación</th>
+                                                    <th scope="col">Teléfono</th>
+                                                    <th scope="col">Email</th>
+                                                    <th scope="col">Redes Sociales</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {recopSchoolsTable.map((school, index) => (
+                                                    <tr key={school.id}>
+                                                        <th scope="row">{index + 1}</th>
+                                                        <td>
+                                                            <strong>{school.name}</strong>
+                                                            {school.description && (
+                                                                <div className="school-table-desc">
+                                                                    <small className="text-muted">{school.description}</small>
+                                                                </div>
+                                                            )}
+                                                        </td>
+                                                        <td>
+                                                            <i className="fa-solid fa-location-dot text-danger me-2"></i>
+                                                            {school.location}
+                                                        </td>
+                                                        <td>
+                                                            <div className="school-phones">
+                                                                <div>{school.phone1}</div>
+                                                                {school.phone2 && (
+                                                                    <div className="text-muted">
+                                                                        <small>{school.phone2}</small>
+                                                                    </div>
+                                                                )}
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            {school.email ? (
+                                                                <a href={`mailto:${school.email}`} className="school-email-link">
+                                                                    <i className="fa-solid fa-envelope me-2"></i>
+                                                                    {school.email}
+                                                                </a>
+                                                            ) : (
+                                                                <span className="text-muted">-</span>
+                                                            )}
+                                                        </td>
+                                                        <td>
+                                                            <div className="school-social-links">
+                                                                {school.socialNetworks.facebook && (
+                                                                    <a 
+                                                                        href={school.socialNetworks.facebook}
+                                                                        target="_blank"
+                                                                        rel="noopener noreferrer"
+                                                                        className="social-icon facebook"
+                                                                        title="Facebook"
+                                                                    >
+                                                                        <i className="fab fa-facebook-f"></i>
+                                                                    </a>
+                                                                )}
+                                                                {school.socialNetworks.instagram && (
+                                                                    <a 
+                                                                        href={school.socialNetworks.instagram.startsWith('http') 
+                                                                            ? school.socialNetworks.instagram 
+                                                                            : `https://instagram.com/${school.socialNetworks.instagram.replace('@', '')}`}
+                                                                        target="_blank"
+                                                                        rel="noopener noreferrer"
+                                                                        className="social-icon instagram"
+                                                                        title="Instagram"
+                                                                    >
+                                                                        <i className="fab fa-instagram"></i>
+                                                                    </a>
+                                                                )}
+                                                                {school.socialNetworks.twitter && (
+                                                                    <a 
+                                                                        href={`https://twitter.com/${school.socialNetworks.twitter.replace('@', '')}`}
+                                                                        target="_blank"
+                                                                        rel="noopener noreferrer"
+                                                                        className="social-icon twitter"
+                                                                        title="Twitter"
+                                                                    >
+                                                                        <i className="fab fa-twitter"></i>
+                                                                    </a>
+                                                                )}
+                                                                {school.socialNetworks.youtube && (
+                                                                    <a 
+                                                                        href={school.socialNetworks.youtube}
+                                                                        target="_blank"
+                                                                        rel="noopener noreferrer"
+                                                                        className="social-icon youtube"
+                                                                        title="YouTube"
+                                                                    >
+                                                                        <i className="fab fa-youtube"></i>
+                                                                    </a>
+                                                                )}
+                                                                {!school.socialNetworks.facebook && 
+                                                                 !school.socialNetworks.instagram && 
+                                                                 !school.socialNetworks.twitter && 
+                                                                 !school.socialNetworks.youtube && (
+                                                                    <span className="text-muted">-</span>
+                                                                )}
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                ))}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
+
+                    {/* Tabla de Institutos - Solo para RECOP */}
+                    {region === 'RENOCC' && recopSchoolsTable.length > 0 && (
+                        <div className="row mt-60">
+                            <div className="col-12">
+                                <div className="bd-schools-table-wrapper">
+                                    <div className="bd-section-title-wrapper text-center mb-40">
+                                        <h3 className="bd-section-title">
+                                            Directorio Completo de Institutos RECOP
+                                        </h3>
+                                        <p className="bd-section-des">
+                                            Información detallada de contacto de nuestros institutos afiliados
+                                        </p>
+                                    </div>
+                                    <div className="table-responsive">
+                                        <table className="table bd-schools-table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">Nombre del Instituto</th>
+                                                    <th scope="col">Ubicación</th>
+                                                    <th scope="col">Teléfono</th>
+                                                    <th scope="col">Email</th>
+                                                    <th scope="col">Redes Sociales</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {recopSchoolsTable.map((school, index) => (
+                                                    <tr key={school.id}>
+                                                        <th scope="row">{index + 1}</th>
+                                                        <td>
+                                                            <strong>{school.name}</strong>
+                                                            {school.description && (
+                                                                <div className="school-table-desc">
+                                                                    <small className="text-muted">{school.description}</small>
+                                                                </div>
+                                                            )}
+                                                        </td>
+                                                        <td>
+                                                            <i className="fa-solid fa-location-dot text-danger me-2"></i>
+                                                            {school.location}
+                                                        </td>
+                                                        <td>
+                                                            <div className="school-phones">
+                                                                <div>{school.phone1}</div>
+                                                                {school.phone2 && (
+                                                                    <div className="text-muted">
+                                                                        <small>{school.phone2}</small>
+                                                                    </div>
+                                                                )}
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            {school.email ? (
+                                                                <a href={`mailto:${school.email}`} className="school-email-link">
+                                                                    <i className="fa-solid fa-envelope me-2"></i>
+                                                                    {school.email}
+                                                                </a>
+                                                            ) : (
+                                                                <span className="text-muted">-</span>
+                                                            )}
+                                                        </td>
+                                                        <td>
+                                                            <div className="school-social-links">
+                                                                {school.socialNetworks.facebook && (
+                                                                    <a 
+                                                                        href={school.socialNetworks.facebook}
+                                                                        target="_blank"
+                                                                        rel="noopener noreferrer"
+                                                                        className="social-icon facebook"
+                                                                        title="Facebook"
+                                                                    >
+                                                                        <i className="fab fa-facebook-f"></i>
+                                                                    </a>
+                                                                )}
+                                                                {school.socialNetworks.instagram && (
+                                                                    <a 
+                                                                        href={school.socialNetworks.instagram.startsWith('http') 
+                                                                            ? school.socialNetworks.instagram 
+                                                                            : `https://instagram.com/${school.socialNetworks.instagram.replace('@', '')}`}
+                                                                        target="_blank"
+                                                                        rel="noopener noreferrer"
+                                                                        className="social-icon instagram"
+                                                                        title="Instagram"
+                                                                    >
+                                                                        <i className="fab fa-instagram"></i>
+                                                                    </a>
+                                                                )}
+                                                                {school.socialNetworks.twitter && (
+                                                                    <a 
+                                                                        href={`https://twitter.com/${school.socialNetworks.twitter.replace('@', '')}`}
+                                                                        target="_blank"
+                                                                        rel="noopener noreferrer"
+                                                                        className="social-icon twitter"
+                                                                        title="Twitter"
+                                                                    >
+                                                                        <i className="fab fa-twitter"></i>
+                                                                    </a>
+                                                                )}
+                                                                {school.socialNetworks.youtube && (
+                                                                    <a 
+                                                                        href={school.socialNetworks.youtube}
+                                                                        target="_blank"
+                                                                        rel="noopener noreferrer"
+                                                                        className="social-icon youtube"
+                                                                        title="YouTube"
+                                                                    >
+                                                                        <i className="fab fa-youtube"></i>
+                                                                    </a>
+                                                                )}
+                                                                {!school.socialNetworks.facebook && 
+                                                                 !school.socialNetworks.instagram && 
+                                                                 !school.socialNetworks.twitter && 
+                                                                 !school.socialNetworks.youtube && (
+                                                                    <span className="text-muted">-</span>
+                                                                )}
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                ))}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
+
 
                     {/* Load More Button - Solo si hay muchos institutos */}
                     {schools.length > 12 && (
