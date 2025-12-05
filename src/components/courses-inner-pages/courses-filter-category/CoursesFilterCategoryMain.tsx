@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 import Breadcrumbs from '../../common/Breadcrumb/Breadcrumbs';
 import coursesData from '@/data/courses/courses-data';
 import CommonCourseSingleCard from '../../common/courses-card/CommonCourseSingleCard';
@@ -15,12 +15,12 @@ const CoursesFilterCategoryMain = () => {
 
 
     // Smooth slide-up animation
-    const containerVariants = {
+    const containerVariants: Variants = {
         hidden: { opacity: 0, y: 50 },
         visible: {
             opacity: 1,
             y: 0,
-            transition: { duration: 0.5, ease: [0.4, 0, 0.2, 1] },
+            transition: { duration: 0.5 },
         },
     };
 
